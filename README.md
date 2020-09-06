@@ -1,15 +1,21 @@
 # Performance Testing with K6
 
-> Load testing workshop, demonstrating k6
-
-## Video
+## Inspiration
 
 [![Performance Testing with k6 Video](https://img.youtube.com/vi/Hu1K2ZGJ_K4/0.jpg)](https://www.youtube.com/watch?v=Hu1K2ZGJ_K4)
+
+[https://github.com/cajames/performance-testing-with-k6](https://github.com/cajames/performance-testing-with-k6)
+
+## Virtual Users
+
+```
+VUs = numOfHourlySessions * avgSessionDurationInSecs / 3600
+```
 
 ## Getting started:
 - `docker-compose up -d influxdb grafana`
 - Load http://localhost:3000, and import the `grafana_dashboard.json` config to a new dashboard.
-- `docker-compose run k6 run /tests/01-simple/test.js`
+- `docker-compose run k6 run /tests/demo-app/test.js`
 
 ## To use cloud run
 

@@ -1,8 +1,4 @@
 import http from 'k6/http'
-import { Rate } from 'k6/metrics';
-
-
-const errorRate = new Rate('errorRate');
 
 export let options = {
     stages: [
@@ -14,13 +10,7 @@ export let options = {
 
         // Ramp-down from 10 to 0 VUs for 5s
         { duration: "5s", target: 0 }
-    ],
-    thresholds: {
-        errorRate: [
-            // more than 10% of errors will abort the test
-            { threshold: 'rate < 0.1', abortOnFail: true }
-        ]
-    }
+    ]
 };
 
 // Entry point for virtual users

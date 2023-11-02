@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: tests/basics/7_post_request_using_basic_auth.js
+  checksum: f66331396bbe8d3450f4f93ecce93804baf4b872407485a356f41d31c123c405
+version: ""
